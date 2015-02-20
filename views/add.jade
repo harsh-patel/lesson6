@@ -1,0 +1,19 @@
+﻿extends layout
+
+block content
+    div(class='container')
+        div(class='collapse navbar-collapse')
+            a(href='/products', title='List Products') List Products
+        h2 Add a New Product
+        form(method='post', action='/products/add')
+            div(class='col-lg-8 col-lg offset-2')
+                div(class='row control-group')
+                    label Title
+                    input(name='title', required, placeholder='title')
+                div(class='row control-group')
+                    label Description
+                    textarea(name='description', required, placeholder='description')
+                div(class='row control-group')
+                    label Price
+                    input(name='price', required, placeholder='price', type='number')
+                input(type='submit', value='Add Product')

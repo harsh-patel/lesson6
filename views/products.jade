@@ -1,0 +1,18 @@
+﻿extends layout
+
+block content
+    div(class='container')
+        div(class='collapse navbar-collapse')
+            a(href='/products/add', title='Add Product') Add Product     
+        h2 Product List
+        table(class='table-bordered')
+            thead
+                th Title
+                th Description
+                th Price
+            tbody
+                each product, i in products
+                    tr
+                        td #{product.title}
+                        td #{product.description}
+                        td #{product.price}
